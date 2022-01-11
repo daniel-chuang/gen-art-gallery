@@ -4,4 +4,6 @@
 
 [Rasterize 3D](https://daniel-chuang.github.io/gen-art-gallery/rasterize-3d/)
 
-[Rasterize 2D](https://daniel-chuang.github.io/gen-art-gallery/rasterize-image/)
+[Rasterize 2D](https://daniel-chuang.github.io/gen-art-gallery/rasterize-2d/)
+
+[A Flower is a Line]()
