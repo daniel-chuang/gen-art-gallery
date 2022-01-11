@@ -35,8 +35,8 @@ function draw() {
 
   // BEGINNING OF KINETIC TEXT MODIFICATIONS
   // Creation of tiles
-  let tilesX = 16;
-  let tilesY = 12;
+  let tilesX = 24;
+  let tilesY = 15;
   let tileW = int(width/tilesX);
   let tileH = int(height/tilesY);
 
