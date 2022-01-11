@@ -4,9 +4,10 @@ var color_i_avg;
 
 function preload() {
   // Preloading an image
-  num = String(round(random(2.49, 16.499)));
+  num = String(round(random(3.51, 15.499)));
   console.log(num)
   img = loadImage(`assets/image${num}.jpg`);
+  font = loadFont("SourceSansPro-Light.otf")
 }
 
 function setup() {
@@ -23,10 +24,21 @@ function setup() {
   dyRotationSlider = createSlider(-20, 20, 0, 0.5);
   dzRotationSlider = createSlider(-20, 20, 0, 0.5);
   scaleSlider = createSlider(0.2, 3, 1, 0.1);
+  
+  textAlign(CENTER);
+  textFont(font);
+  textSize(20)
+  stroke(255, 255, 255);
+  fill(255);
 }
 
 function draw() {
-  background(200);
+  background(0);
+  
+  if (frameCount < 120) {
+    text("PLEASE USE THE SLIDERS", 0, height/2 - 20);
+  }
+  
   rotateX(frameCount * xRotationSlider.value());
   rotateY(frameCount * yRotationSlider.value());
   rotateZ(frameCount * zRotationSlider.value());
