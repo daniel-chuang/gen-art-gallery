@@ -1,5 +1,9 @@
 # Daniel Chuang's Generative Art Gallery
 
+[Kinetic Spinning Text](https://daniel-chuang.github.io/gen-art-gallery/kinetic-spinning-text/)
+
+[Spinning Text](https://daniel-chuang.github.io/gen-art-gallery/spinning-text/)
+
 [Kinetic Typography](https://daniel-chuang.github.io/gen-art-gallery/kinetic-typography/)
 
 [Rasterize 3D](https://daniel-chuang.github.io/gen-art-gallery/rasterize-3d/)
