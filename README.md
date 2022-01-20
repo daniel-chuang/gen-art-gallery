@@ -1,6 +1,6 @@
 # Daniel Chuang's Generative Art Gallery
 
-[Trancey Spiral](https://daniel-chuang.github.io/gen-art-gallery/trancey-spirals/)
+[Trance Spiral](https://daniel-chuang.github.io/gen-art-gallery/trance-spiral/)
 
 [Kinetic Spinning Text](https://daniel-chuang.github.io/gen-art-gallery/kinetic-spinning-text/)
 

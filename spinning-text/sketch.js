@@ -5,7 +5,8 @@ function preload() {
 
 function setup() {
   // WEBGL Allows for 3D renderings
-  createCanvas(800, 800, WEBGL);
+  cnv = createCanvas(800, 800, WEBGL);
+  cnv.position((windowWidth - width) / 2, (windowHeight - height) / 2);
   angleMode(DEGREES);
   background(0);
   

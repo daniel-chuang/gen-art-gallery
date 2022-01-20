@@ -6,7 +6,8 @@ function preload() {
 
 function setup() {
   // WEBGL Allows for 3D renderings
-  pg = createCanvas(800, 800, WEBGL);
+  cnv = createCanvas(800, 800, WEBGL);
+  cnv.position((windowWidth - width) / 2, (windowHeight - height) / 2)
   angleMode(DEGREES);
   image.resize(width, 0);
   
@@ -15,28 +16,28 @@ function setup() {
 
   // Setting up styles
   textFont(font);
-  pg.textAlign(CENTER, TOP);
-  pg.textSize(80);
-  pg.fill(255);
+  cnv.textAlign(CENTER, TOP);
+  cnv.textSize(80);
+  cnv.fill(255);
 }
 
 function draw() {
   // Resetting the drawing state to a blank canvas at the beginning of each iteration
-  pg.background(0);
+  cnv.background(0);
 
   // Drawing the text
   push();
-  pg.rotateY(frameCount/50 - 50);
-  pg.rotateX(frameCount/100);
-  pg.rotateZ(frameCount/200);
+  cnv.rotateY(frameCount/50 - 50);
+  cnv.rotateX(frameCount/100);
+  cnv.rotateZ(frameCount/200);
   for (let z = 8; z < 15; z++) {
-    pg.fill(255 - (z-8) * 12, sin(frameCount/1) * 130 + 125, 255 - abs(sin(frameCount/4) * 255));
+    cnv.fill(255 - (z-8) * 12, sin(frameCount/1) * 130 + 125, 255 - abs(sin(frameCount/4) * 255));
     for (let i = 0; i < words.length; i++) {
-      pg.text(words[i], 0, (90 * i) - height / 2 + 80);
-      pg.rotateY(sin(frameCount/(z * 40)) * 10);
+      cnv.text(words[i], 0, (90 * i) - height / 2 + 80);
+      cnv.rotateY(sin(frameCount/(z * 40)) * 10);
     }
   }
-  pg.filter(BLUR, 10);
+  cnv.filter(BLUR, 10);
   pop();
 
 
@@ -61,7 +62,7 @@ function draw() {
       let dx = x * tileW;
       let dy = y * tileH;
 
-      copy(pg, sx, sy, tileW, tileH, dx - width/2, dy - height/2, tileW, tileH);
+      copy(cnv, sx, sy, tileW, tileH, dx - width/2, dy - height/2, tileW, tileH);
     }
   }
 

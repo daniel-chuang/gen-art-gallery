@@ -5,7 +5,8 @@
 let pg;
 
 function setup() {
-  createCanvas(500, 150);
+  cnv = createCanvas(1500, 450);
+  cnv.position((windowWidth - width)/2, (windowHeight - height)/2)
   pg = createGraphics(500, 150);
 
   // Sets the properties of the text
@@ -26,7 +27,7 @@ function draw() {
 
   // Creates the text at the center of the screen
   pg.push();
-  pg.translate(width/2, height/2);
+  pg.translate(pg.width/2, pg.height/2);
   pg.text("daniel", 0, 0);
   pg.pop();
 
@@ -37,8 +38,11 @@ function draw() {
   // Creation of tiles
   let tilesX = 24;
   let tilesY = 15;
-  let tileW = int(width/tilesX);
-  let tileH = int(height/tilesY);
+  let tileW = int(pg.width/tilesX);
+  let tileH = int(pg.height/tilesY);
+
+  // Image to canvas ratio
+  let ratio = width/pg.width;
 
   // Iteration through tiles
   for (let y = 0; y < tilesY; y++) {
@@ -54,10 +58,10 @@ function draw() {
       let sy = y*tileH + waveY;
 
       // Destination variables
-      let dx = x*tileW;
-      let dy = y*tileH;
-
-      copy(pg, sx, sy, tileW, tileH, dx, dy, tileW, tileH)
+      let dx = x*tileW * ratio;
+      let dy = y*tileH * ratio;
+      
+      copy(pg, sx, sy, tileW, tileH, dx, dy, tileW * ratio, tileH * ratio)
     }
   }
 }

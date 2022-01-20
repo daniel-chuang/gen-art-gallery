@@ -7,19 +7,22 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(img.width, img.height);
+  cnv = createCanvas(img.width, img.height);
+  cnv.position((windowWidth - width)/2, (windowHeight - height)/2)
   print(img.width, img.height);
   noStroke();
 }
 
 function draw() {
-  background(220);
+  background(0);
+  let frameScale = 0.7 + (0.5 * sin(frameCount / 10))
+
   for (let col = 0; col < img.width; col+=step) {
     for (let row = 0; row < img.height; row+=step) {
       color = img.get(col, row);
-      fill(0, 0, 0);
+      fill(255, 255, 255);
       //fill(color);
-      var squareSize = 1 - map(average(color), 0, 100, 0, 1);
+      var squareSize = 1 - map(average(color), 0, 100, 0, 1) * frameScale;
       square(col, row, squareSize * step/2);
     }
   }

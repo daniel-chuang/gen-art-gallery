@@ -1,5 +1,6 @@
 function setup() {
-  createCanvas(700, 700);
+  cnv = createCanvas(900, 900);
+  cnv.position((windowWidth - width)/2, (windowHeight - height)/2)
   background(0);
 }
 

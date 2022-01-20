@@ -4,7 +4,7 @@ var color_i_avg;
 
 function preload() {
   // Preloading an image
-  num = String(round(random(3.51, 15.499)));
+  num = String(round(random(2.5001, 15.499)));
   console.log(num)
   img = loadImage(`assets/image${num}.jpg`);
   font = loadFont("SourceSansPro-Light.otf")
@@ -13,16 +13,17 @@ function preload() {
 function setup() {
   // WebGL allows for 3d renderings
   img.resize(0, window.innerHeight * (19/40));
-  createCanvas(img.width * 2, img.height * 2, WEBGL);
+  cnv = createCanvas(img.width * 2, img.height * 2, WEBGL);
+  cnv.position((windowWidth - width)/2, (windowHeight - height)/2)
   angleMode(DEGREES);
 
   // Creating sliders for user input
-  yRotationSlider = createSlider(-4, 4, 0, 0.5);
-  xRotationSlider = createSlider(-4, 4, 0, 0.5);
-  zRotationSlider = createSlider(-4, 4, 0, 0.5);
   dxRotationSlider = createSlider(-20, 20, 0, 0.5);
   dyRotationSlider = createSlider(-20, 20, 0, 0.5);
   dzRotationSlider = createSlider(-20, 20, 0, 0.5);
+  yRotationSlider = createSlider(-4, 4, 0, 0.5);
+  xRotationSlider = createSlider(-4, 4, 0, 0.5);
+  zRotationSlider = createSlider(-4, 4, 0, 0.5);
   scaleSlider = createSlider(0.2, 3, 1, 0.1);
   
   textAlign(CENTER);
