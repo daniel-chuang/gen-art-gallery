@@ -5,7 +5,7 @@
 let pg;
 
 function setup() {
-  cnv = createCanvas(1500, 450);
+  cnv = createCanvas(1000, 300);
   cnv.position((windowWidth - width)/2, (windowHeight - height)/2)
   pg = createGraphics(500, 150);
 
