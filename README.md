@@ -1,5 +1,7 @@
 # Daniel Chuang's Generative Art Gallery
 
+[Circling Circles](https://daniel-chuang.github.io/gen-art-gallery/circling-circles/)
+
 [Trance Spiral](https://daniel-chuang.github.io/gen-art-gallery/trance-spiral/)
 
 [Kinetic Spinning Text](https://daniel-chuang.github.io/gen-art-gallery/kinetic-spinning-text/)
