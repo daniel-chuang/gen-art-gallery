@@ -1,6 +1,6 @@
 # Daniel Chuang's Generative Art Gallery
 
-[Randomized Diagonals](https://daniel-chuang.github.io/gen-art-gallery/randomdized-diagonals/)
+[Randomized Diagonals](https://daniel-chuang.github.io/gen-art-gallery/randomized-diagonals/)
 
 [Circling Circles](https://daniel-chuang.github.io/gen-art-gallery/circling-circles/)
 
