@@ -1,5 +1,7 @@
 # Daniel Chuang's Generative Art Gallery
 
+[Randomized Diagonals](https://daniel-chuang.github.io/gen-art-gallery/randomdized-diagonals/)
+
 [Circling Circles](https://daniel-chuang.github.io/gen-art-gallery/circling-circles/)
 
 [Trance Spiral](https://daniel-chuang.github.io/gen-art-gallery/trance-spiral/)
