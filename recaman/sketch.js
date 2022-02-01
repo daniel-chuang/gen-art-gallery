@@ -22,7 +22,7 @@ function draw() {
 
   // Drawing each circle in the sequence
   for (let i=1; i<memory.length; i++) {
-    stroke(150 + 100 * sin(frameCount / 50) - i, 100 + 50 * sin(frameCount / 50) + i, 205 + 50 * sin(frameCount / 50) + i/2);
+    stroke(200 + 50 * sin(frameCount / 50) - i, 100 + 50 * sin(frameCount / 50) + i, 205 + 50 * sin(frameCount / 50) + i/2);
 
     // Alternating the semicircles up and down based off the mod of i
     if (i % 2 == 0) {
