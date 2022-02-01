@@ -2,7 +2,7 @@ var memory;
 
 function setup() {
   // Setting up the canvas
-  createCanvas(1600, 600);
+  createCanvas(600, 1200);
   noFill();
 
   // Calling the recaman function to recursively calculate the recaman sequence values
@@ -14,9 +14,9 @@ function draw() {
   // Resetting the translating the screen
   background(0);
   // translate(mouseX, height/2);
-  translate(0, height/2)
+  translate(width/2, 0)
   strokeWeight(0.2);
-  scale(2);
+  scale(3);
 
   [_value, memory] = recaman(abs(int(400 * sin(frameCount / 100))), []); // _value is a junk variable
 
@@ -26,16 +26,16 @@ function draw() {
 
     // Alternating the semicircles up and down based off the mod of i
     if (i % 2 == 0) {
-      [start_angle, end_angle] = [0, PI]
+      [start_angle, end_angle] = [PI/2, 3*PI/2]
     } else {
-      [start_angle, end_angle] = [PI, 2*PI]
+      [start_angle, end_angle] = [3*PI/2, PI/2]
     }
 
     // Drawing the arcs based on if its increasing or decreasing
     if (memory[i-1] < memory[i]) {
-      arc(memory[i-1] + i/2, 0, memory[i] - memory[i-1], i, start_angle, end_angle) // Donno why but I have to add a fudge factor of i/2
+      arc(0, memory[i-1] + i/2, i, memory[i] - memory[i-1], start_angle, end_angle) // Donno why but I have to add a fudge factor of i/2
     } else {
-      arc(memory[i] + i/2, 0, memory[i-1] - memory[i], i, start_angle, end_angle)
+      arc(0, memory[i] + i/2, i, memory[i-1] - memory[i], start_angle, end_angle)
     }
   }
 }

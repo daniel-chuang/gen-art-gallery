@@ -1,5 +1,7 @@
 # Daniel Chuang's Generative Art Gallery
 
+[Recamán's Sequence Interpretation](https://daniel-chuang.github.io/gen-art-gallery/recaman/)
+
 [Randomized Diagonals](https://daniel-chuang.github.io/gen-art-gallery/randomized-diagonals/)
 
 [Circling Circles](https://daniel-chuang.github.io/gen-art-gallery/circling-circles/)

@@ -2,7 +2,7 @@ var memory;
 
 function setup() {
   // Setting up the canvas
-  createCanvas(1600, 600);
+  createCanvas(800, 800);
   noFill();
 
   // Calling the recaman function to recursively calculate the recaman sequence values
@@ -12,18 +12,13 @@ function setup() {
 
 function draw() {
   // Resetting the translating the screen
-  background(0);
-  // translate(mouseX, height/2);
-  translate(0, height/2)
+  background(220);
+  translate(mouseX, height/2);
   strokeWeight(0.2);
-  scale(2);
-
-  [_value, memory] = recaman(abs(int(400 * sin(frameCount / 100))), []); // _value is a junk variable
+  scale(mouseY * 0.05);
 
   // Drawing each circle in the sequence
   for (let i=1; i<memory.length; i++) {
-    stroke(150 + 100 * sin(frameCount / 50) - i, 100 + 50 * sin(frameCount / 50) + i, 205 + 50 * sin(frameCount / 50) + i/2);
-
     // Alternating the semicircles up and down based off the mod of i
     if (i % 2 == 0) {
       [start_angle, end_angle] = [0, PI]
@@ -54,7 +49,7 @@ function recaman(n, memory) {
     value = recaman(n-1, memory)[0];
   }
   
-  if ((value - n > abs(300 * sin(frameCount/200))) && !(memory.includes(value - n))) { // If the value - n is greater than 0 AND the value - n is not already in the sequence
+  if ((value - n > 0) && !(memory.includes(value - n))) { // If the value - n is greater than 0 AND the value - n is not already in the sequence
     memory.push(value - n)
     // console.log("minus")
     return [value - n, memory];
