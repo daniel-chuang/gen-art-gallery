@@ -2,7 +2,8 @@ var memory;
 
 function setup() {
   // Setting up the canvas
-  createCanvas(1600, 600);
+  cnv = createCanvas(1600, 600);
+  cnv.position((windowWidth - width)/2, (windowHeight - height)/2);
   noFill();
 
   // Calling the recaman function to recursively calculate the recaman sequence values
@@ -40,7 +41,7 @@ function draw() {
   }
 }
 
-
+// Recursive function for calculating Recaman's sequence. Memoized
 function recaman(n, memory) {
   if (n==0) {
     memory.push(0);
