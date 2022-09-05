@@ -1,5 +1,11 @@
 # Daniel Chuang's Generative Art Gallery
 
+[Interactive Grid](https://daniel-chuang.github.io/gen-art-gallery/interactive-grid/)
+
+[Trippy Grid](https://daniel-chuang.github.io/gen-art-gallery/trippy-grid/)
+
+[Wonky Interactive Grid](https://daniel-chuang.github.io/gen-art-gallery/wonky-interactive-grid/)
+
 [Recamán's Sequence Interpretation](https://daniel-chuang.github.io/gen-art-gallery/recaman/)
 
 [Randomized Diagonals](https://daniel-chuang.github.io/gen-art-gallery/randomized-diagonals/)
