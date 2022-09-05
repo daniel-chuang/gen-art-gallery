@@ -17,6 +17,7 @@ function preload() {
   var img2 = loadImage("assets/image2.png");
   var img3 = loadImage("assets/image3.png");
   var img4 = loadImage("assets/image4.png");
+  var img4 = loadImage("assets/image5.png");
   imgList = [img0, img1, img2, img3, img4];
   img = imgList[String(imageCount)];
   

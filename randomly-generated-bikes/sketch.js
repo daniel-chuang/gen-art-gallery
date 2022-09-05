@@ -8,10 +8,10 @@ var firstPressed = false;
 
 let cnv;
 function setup() {
-  cnv = createCanvas(500, 500);
+  cnv = createCanvas(800, 800);
   cnv.position((windowWidth - width) / 2, (windowHeight - height) / 2)
   background(0);
-  bike1 = new Bike(160, 300, 1, [0, 255, 0], 5);
+  bike1 = new Bike(160, 300, 8/5, [0, 255, 0], 5);
   bike1.create()
   frameRate(2)
 }
@@ -86,7 +86,7 @@ class Bike {
 function mouseClicked() {
   // Draws a bike on click
   background(0);
-  bike1 = new Bike(160, 300, 1, [0, 255, 0], 5);
+  bike1 = new Bike(160, 300, 8/5, [0, 255, 0], 5);
   bike1.create();
   firstPressed = true;
 }

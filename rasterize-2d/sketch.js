@@ -3,7 +3,7 @@ let step = 7;
 var color;
 
 function preload() {
-  img = loadImage("assets/photo.jpeg");
+  img = loadImage("assets/woman.jpg");
 }
 
 function setup() {

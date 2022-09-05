@@ -12,6 +12,8 @@ function setup() {
   
   // Setting up words
   words = ["Welcome", "to", "Daniel", "Chuang's", "Generative", "Art", "Gallery"];
+  words = ["The", "Generative", "Art", "Club"];
+  // words = ["Who", "is", "the", "Devil", "in", "Your", "Dreams?"];
 
   // Setting up styles
   textFont(font);
@@ -19,8 +21,8 @@ function setup() {
   textSize(80);
   fill(255);
 }
-
 function draw() {
+
   // Resetting the drawing state to a blank canvas at the beginning of each iteration
   background(0);
 
@@ -31,7 +33,7 @@ function draw() {
   for (let z = 8; z < 50; z++) {
     fill(255 - (z-8) * 5);
     for (let i = 0; i < words.length; i++) {
-      text(words[i], 0, (90 * i) - height / 2 + 80);
+      text(words[i], 0, (90 * i) - height / 2 + 200);
       rotateY(sin(frameCount/z) * 10);
     }
   }

@@ -28,7 +28,7 @@ function draw() {
   // Creates the text at the center of the screen
   pg.push();
   pg.translate(pg.width/2, pg.height/2);
-  pg.text("daniel", 0, 0);
+  pg.text("kinetic", 0, 0);
   pg.pop();
 
   // Experimental blur effect
